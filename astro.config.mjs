@@ -4,8 +4,7 @@ import starlightDocSearch from "@astrojs/starlight-docsearch";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://hyperxq.github.io",
-  base: "/Project-Builder-schematics-docs",
+  site: "https://schematics.pbuilder.dev",
   integrations: [
     starlight({
       expressiveCode: {
