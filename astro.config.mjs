@@ -121,7 +121,7 @@ export default defineConfig({
       plugins: [
         starlightDocSearch({
           appId: "XPU6E4M3TZ",
-          apiKey: "cc982c544200f8f09a971ce953ddeb54",
+          apiKey: "d53d6ea89cda557d98201dac49fc387d",
           indexName: "dev_Name",
         }),
       ],
