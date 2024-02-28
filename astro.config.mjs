@@ -1,12 +1,11 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
-
-import expressiveCode from "astro-expressive-code";
+import starlight from "@astrojs/starlight";
 import starlightDocSearch from "@astrojs/starlight-docsearch";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://schematics.pbuilder.dev",
+  site: "https://hyperxq.github.io",
+  base: "/Project-Builder-schematics-docs",
   integrations: [
     starlight({
       expressiveCode: {
