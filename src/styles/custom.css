@@ -1,0 +1,33 @@
+@import url('./colors.css');
+
+/* Dark mode colors. */
+:root {
+  --sl-color-accent-low: var(--colors-brand-950);
+  --sl-color-accent: var(--colors-brand-600);
+  --sl-color-accent-high: var(--colors-brand-400);
+  --sl-color-white: var(--colors-brand-50);
+  --sl-color-gray-1: var(--colors-gray-cool-50);
+  --sl-color-gray-2: var(--colors-gray-cool-200);
+  --sl-color-gray-3: var(--colors-gray-cool-400);
+  --sl-color-gray-4: var(--colors-gray-cool-600);
+  --sl-color-gray-5: var(--colors-gray-cool-800);
+  --sl-color-gray-6: var(--colors-gray-cool-900);
+  --sl-color-black: var(--colors-gray-cool-950);
+  }
+  
+  /* Light mode colors. */
+  :root[data-theme='light'] {
+  --sl-color-accent-low: var(--colors-brand-400);
+  --sl-color-accent: var(--colors-brand-600);
+  --sl-color-accent-high: var(--colors-brand-950);
+  --sl-color-white: var(--colors-gray-blue-900);
+  --sl-color-gray-1: var(--colors-gray-cool-950);
+  --sl-color-gray-2: var(--colors-gray-cool-900);
+  --sl-color-gray-3: var(--colors-gray-cool-800);
+  --sl-color-gray-4: var(--colors-gray-cool-600);
+  --sl-color-gray-5: var(--colors-gray-cool-400);
+  --sl-color-gray-6: var(--colors-gray-cool-200);
+  --sl-color-gray-7: var(--colors-gray-cool-50);
+  --sl-color-black: #ffff;
+  }
+  
