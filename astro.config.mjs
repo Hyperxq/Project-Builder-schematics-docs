@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
-import starlightDocSearch from "@astrojs/starlight-docsearch";
+// import starlightDocSearch from "@astrojs/starlight-docsearch";
 
 // https://astro.build/config
 export default defineConfig({
@@ -119,11 +119,11 @@ export default defineConfig({
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [
-        starlightDocSearch({
-          appId: "XPU6E4M3TZ",
-          apiKey: "d53d6ea89cda557d98201dac49fc387d",
-          indexName: "dev_Name",
-        }),
+        // starlightDocSearch({
+        //   appId: "XPU6E4M3TZ",
+        //   apiKey: "d53d6ea89cda557d98201dac49fc387d",
+        //   indexName: "dev_Name",
+        // }),
       ],
     }),
   ],
