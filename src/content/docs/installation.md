@@ -11,8 +11,8 @@ To create schematics you need to create a npm project library:
 
 Execute:
 
-```powershell title="installation"
-npx @danils/project-builder-cli new <project-name> [author] --bundler=rollup
+```ansi title="installation"
+[38;2;127;86;217mnpx @danils/project-builder-cli[0m [38;2;0;134;201mnew[0m [38;2;23;178;106m<project-name> [author][0m [38;2;133;136;142m--bundler=rollup[0m
 ```
 
 - The author is optional.
