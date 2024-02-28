@@ -11,6 +11,7 @@ https://bobbyhadz.com/blog/unable-to-load-schema-from-vscode-cannot-open.
 - Setup a basic configurations to use the our first schematic.
 - Create our first schematic.
 
+## Create a schematic project
 **Execute:**
 ```powershell
 npx @danils/project-builder-cli@latest <library-name> [author]

@@ -12,7 +12,8 @@ In summary, whatever you want to do with files you will need to use the Tree obj
 
 The tree object has interesting methods to interact with the file system:
 
-### read
+### To Read Files
+#### read
 
 #### readText
 
@@ -26,26 +27,26 @@ Supports parsing JSON (RFC 8259) with the following extensions:
 - Single-line and multi-line JavaScript comments
 - Trailing commas within objects and arrays
 
-### exists
-
-### get
-
+### To check files
+#### exists
+#### get
 #### getDir
-
 ### visit
 
-### create
 
-### overwrite
+### To change the content of the host files.
+#### beginUpdate
+#### commitUpdate
+#### overwrite
 
-### rename
 
-### beginUpdate
-
-### commitUpdate
-
+### Structural methods
+#### create
+#### delete
+#### rename
 ### apply
 
-### branch
 
+
+### branch
 ### merge
