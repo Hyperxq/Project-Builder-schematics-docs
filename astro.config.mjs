@@ -6,6 +6,7 @@ import starlightDocSearch from "@astrojs/starlight-docsearch";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://schematics.pbuilder.dev",
   integrations: [
     starlight({
       expressiveCode: {
