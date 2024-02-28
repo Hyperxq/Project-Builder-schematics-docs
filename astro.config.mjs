@@ -118,13 +118,7 @@ export default defineConfig({
         },
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
-      plugins: [
-        // starlightDocSearch({
-        //   appId: "XPU6E4M3TZ",
-        //   apiKey: "d53d6ea89cda557d98201dac49fc387d",
-        //   indexName: "dev_Name",
-        // }),
-      ],
+      plugins: [],
     }),
   ],
 });
