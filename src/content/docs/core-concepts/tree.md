@@ -8,6 +8,10 @@ The virtual file system is represented by a `Tree`. The `Tree` data structure
 
 In summary, whatever you want to do with files you will need to use the Tree object.
 
+:::note 
+The Tree structure is limited to the directory in which it's placed, having not access to parent directories when executed into a subfolder.
+:::
+
 ## What does Tree class have?
 
 The tree object has interesting methods to interact with the file system:

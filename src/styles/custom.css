@@ -2,6 +2,8 @@
 
 /* Dark mode colors. */
 :root {
+  --sl-content-width: 55rem;
+
   --sl-color-accent-low: var(--colors-brand-950);
   --sl-color-accent: var(--colors-brand-600);
   --sl-color-accent-high: var(--colors-brand-400);

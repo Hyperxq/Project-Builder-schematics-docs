@@ -129,5 +129,5 @@ function replaceNodeTextInFileContent(fileContent: string, node: Node, newText: 
 
 ### Conclusion
 
-When you are modifying a file, you will use NodeJS to read this file as a array of Node. 
+When you are modifying a file, you will use NodeJS to treat this file as a array of Node. 
 This will help you to find the exact point where are the code to insert or modify.

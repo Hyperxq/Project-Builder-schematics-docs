@@ -3,25 +3,25 @@ title: My first schematic
 description: A tutorial to create your first schematic
 ---
 ## Getting started with Schematics
-if you are using vscode, check this article to load schemas:
+If you are using VSCode and encounter issues loading schemas, check this article: 
 https://bobbyhadz.com/blog/unable-to-load-schema-from-vscode-cannot-open.
 
 ## Goals for this section:
-- Create our first schematics project.
-- Setup a basic configurations to use the our first schematic.
+- Create our first Schematics project.
+- Set up basic configurations to use our first schematic.
 - Create our first schematic.
 
 ## Create a schematic project
 **Execute:**
-```powershell
-npx @danils/project-builder-cli@latest <library-name> [author]
+```ansi
+[38;2;127;86;217mnpx @danils/project-builder-cli@latest[0m [38;2;23;178;106m<library-name> [author][0m
 ```
 ## Builder-add schematic
-You will see a folder named: `builder-add`, this folder is for a schematic that works when you not only install you schematics into your project but also before the installation you would like to do some additional settings. In this case create follow this instructions:
+You will see a folder named `builder-add`. This folder is for a schematic that is intended to perform actions not only after installing your schematics into your project but also before the installation to apply additional settings. Follow these instructions:
 
-**1.** In builder-add create this files: `schema.json`, `builder-add.factory.ts`.
+**1.** In the `builder-add` folder, create these files: `schema.json`, `builder-add.factory.ts`.
 
-**2.** Inside `ng-add.factory.ts` create the next method:
+**2.** Inside `builder-add.factory.ts`, create the following method:
 ```ts
 import { Rule } from "@angular-devkit/schematics";
 
@@ -41,7 +41,7 @@ export function main(): Rule {
     }
 }
 ```
-**4.** Inside `ng-add.factory.ts` create the next method:
+**4.** Inside `builder-add.factory.ts` create the next method:
 ```ts
 import { Rule } from "@angular-devkit/schematics";
 
@@ -49,7 +49,6 @@ export function main(): Rule {
 	return () => {};
 }
 ```
-
 
 ## Creating the first schematic
 **1.** Go to builder-generate folder and create a folder inside named: `my-schematic`.
@@ -108,4 +107,4 @@ schematics  ./dist/collection.json:ms
 
 
 **Congratulations! 🚀** 
-You ran your first schematic!
+You've successfully run your first schematic!

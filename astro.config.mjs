@@ -37,11 +37,23 @@ export default defineConfig({
               label: "My first schematic",
               link: "/tutorials/my-first-schematic",
             },
+            {
+              label: "When to use Rules or call other schematics?",
+              link: "/tutorials/using-rules-or-external-schematics",
+            },
           ],
         },
         {
           label: "Core Concepts",
           items: [
+            {
+              label: "Schematic Project Anatomy",
+              link: "/core-concepts/schematic-project-anatomy",
+            },
+            {
+              label: "Rule",
+              link: "/core-concepts/rule",
+            },
             {
               label: "Tree",
               link: "/core-concepts/tree",
@@ -50,10 +62,7 @@ export default defineConfig({
               label: "SchematicContext",
               link: "/core-concepts/schematic-context",
             },
-            {
-              label: "Rule",
-              link: "/core-concepts/rule",
-            },
+
             {
               label: "Schema JSON",
               link: "/core-concepts/schema-json",
