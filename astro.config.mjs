@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: "https://schematics.pbuilder.dev",
@@ -136,5 +137,6 @@ export default defineConfig({
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [],
     }),
+    sitemap()
   ],
 });
