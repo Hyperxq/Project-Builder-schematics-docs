@@ -23,7 +23,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
     title: page.title,
     description: page.description,
     logo: {
-      path: "./src/assets/og.jpg",
+      path: "./public/og.png",
     },
     // There are a bunch more options you can use here!
   }),
