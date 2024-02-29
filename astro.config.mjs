@@ -1,12 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
 
-// <meta property=’og:title’ content='TITLE OF YOUR WEBSITE'/>
-// <meta property=’og:image’ content='https://YOUR_THUMBNAIL_IMAGE_URL’/>
-// <meta property=’og:description’ content='DESCRIPTION OF YOUR SITE'/>
-// <meta property=’og:url’ content='URL OF YOUR WEBSITE'/>
-// <meta property='og:image:width' content='1200' />
-// <meta property='og:image:height' content='627' />
 export default defineConfig({
   site: "https://schematics.pbuilder.dev",
   integrations: [
@@ -22,6 +16,10 @@ export default defineConfig({
         },
       },
       title: "Schematics Docs",
+      components: {
+        // Relative path to the custom component.
+        Head: "./src/components/Head.astro",
+      },
       social: {
         github: "https://github.com/Hyperxq/Project-Builder-schematics-docs",
       },
@@ -140,10 +138,11 @@ export default defineConfig({
       head: [
         {
           tag: "meta",
-          attrs: {
-            content: "https://firebasestorage.googleapis.com/v0/b/projectbuilder-c090b.appspot.com/o/houston.webp?alt=media&token=6ba337cf-508c-4848-8349-7e0ae14dab50",
-            property: "og:image",
-          },
+          attrs: { property: "og:image", content: "https://schematics.pbuilder.dev/og.jpg?v=1" },
+        },
+        {
+          tag: "meta",
+          attrs: { property: "twitter:image", content: "https://schematics.pbuilder.dev/og.jpg?v=1" },
         },
       ],
     }),
