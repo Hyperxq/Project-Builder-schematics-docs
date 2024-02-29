@@ -141,7 +141,7 @@ export default defineConfig({
         {
           tag: "meta",
           attrs: {
-            content: "https://firebasestorage.googleapis.com/v0/b/projectbuilder-c090b.appspot.com/o/logo-light.png?alt=media&token=68d75d0d-7372-4727-b21c-ca3621344ef5",
+            content: "https://firebasestorage.googleapis.com/v0/b/projectbuilder-c090b.appspot.com/o/houston.webp?alt=media&token=6ba337cf-508c-4848-8349-7e0ae14dab50",
             property: "og:image",
           },
         },
