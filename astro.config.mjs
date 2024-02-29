@@ -135,16 +135,6 @@ export default defineConfig({
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [],
-      head: [
-        {
-          tag: "meta",
-          attrs: { property: "og:image", content: "https://schematics.pbuilder.dev/og.png?v=1" },
-        },
-        {
-          tag: "meta",
-          attrs: { property: "twitter:image", content: "https://schematics.pbuilder.dev/og.png?v=1" },
-        },
-      ],
     }),
   ],
 });
