@@ -1,13 +1,16 @@
 import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
-// import starlightDocSearch from "@astrojs/starlight-docsearch";
 
-// https://astro.build/config
+// <meta property=’og:title’ content='TITLE OF YOUR WEBSITE'/>
+// <meta property=’og:image’ content='https://YOUR_THUMBNAIL_IMAGE_URL’/>
+// <meta property=’og:description’ content='DESCRIPTION OF YOUR SITE'/>
+// <meta property=’og:url’ content='URL OF YOUR WEBSITE'/>
+// <meta property='og:image:width' content='1200' />
+// <meta property='og:image:height' content='627' />
 export default defineConfig({
   site: "https://schematics.pbuilder.dev",
   integrations: [
     starlight({
-
       logo: {
         light: "./src/assets/logo-light.svg",
         dark: "./src/assets/logo-dark.svg",
@@ -134,6 +137,15 @@ export default defineConfig({
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [],
+      head: [
+        {
+          tag: "meta",
+          content: "./src/assets/logo-light.svg",
+          attrs: {
+            property: "og:image",
+          },
+        },
+      ],
     }),
   ],
 });
