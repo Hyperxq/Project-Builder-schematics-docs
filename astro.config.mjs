@@ -140,8 +140,8 @@ export default defineConfig({
       head: [
         {
           tag: "meta",
-          content: "./src/assets/logo-light.svg",
           attrs: {
+            content: "https://firebasestorage.googleapis.com/v0/b/projectbuilder-c090b.appspot.com/o/logo-light.png?alt=media&token=68d75d0d-7372-4727-b21c-ca3621344ef5",
             property: "og:image",
           },
         },
