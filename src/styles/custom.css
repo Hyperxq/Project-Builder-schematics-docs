@@ -3,6 +3,9 @@
 /* Dark mode colors. */
 :root {
   --sl-content-width: 55rem;
+  --sl-nav-height: 4rem;
+  --sl-nav-pad-y: .75rem;
+  --sl-nav-pad-x: 1.5rem;
 
   --sl-color-accent-low: var(--colors-brand-950);
   --sl-color-accent: var(--colors-brand-600);

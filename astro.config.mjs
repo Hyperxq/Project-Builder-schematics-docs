@@ -7,6 +7,12 @@ export default defineConfig({
   site: "https://schematics.pbuilder.dev",
   integrations: [
     starlight({
+      favicon: "/src/assets/PB-dark.svg",
+      logo: {
+        light: "./src/assets/logo-light.svg",
+        dark: "./src/assets/logo-dark.svg",
+        replacesTitle: true,
+      },
       expressiveCode: {
         styleOverrides: {
           borderRadius: "0.5rem",
