@@ -1,5 +1,5 @@
 ---
-title: Schema.json
+title: Pre-Execution Inputs
 description: How to show questions before factory function execution.
 ---
 

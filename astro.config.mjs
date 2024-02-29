@@ -105,11 +105,11 @@ export default defineConfig({
               link: "/terminal/user-inputs",
             },
             {
-              label: "Schema",
+              label: "Pre-Execution Inputs",
               link: "/terminal/schema-json",
             },
             {
-              label: "Inquirer",
+              label: "In-Execution Inputs",
               link: "/terminal/inquirer",
             },
           ],

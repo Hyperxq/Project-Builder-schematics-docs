@@ -1,5 +1,5 @@
 ---
-title: Inquirer JS
+title: In-Execution Inputs
 description: Show terminal questions during factory function execution. 
 ---
 
