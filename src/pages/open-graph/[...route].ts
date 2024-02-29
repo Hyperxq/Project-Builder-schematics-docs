@@ -19,7 +19,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
       title: data.title,
       description: data.description,
       border: { width: 32, side: "inline-start" },
-      padding: 40,
+      padding: 60,
       logo: {
         path: "./src/pages/open-graph/_images/docs-logo.png",
         size: [300],
