@@ -16,8 +16,8 @@ export const { getStaticPaths, GET } = OGImageRoute({
 
   getImageOptions: async (_, { data }: (typeof pages)[string]): Promise<OGImageOptions> => {
     return {
-      title: data.title,
-      description: data.description,
+      title: wrapText(data.title, 18),
+      description: wrapText(data.description ?? "", 30),
       border: { width: 32, side: "inline-start" },
       padding: 60,
       logo: {
@@ -68,3 +68,21 @@ export const { getStaticPaths, GET } = OGImageRoute({
     };
   },
 });
+
+function wrapText(text: string, maxWidth: number): string {
+  const words: string[] = text.split(" ");
+  let currentLine: string = "";
+  let formattedText: string = "";
+
+  words.forEach((word: string) => {
+    if ((currentLine + word).length > maxWidth) {
+      formattedText += currentLine.trim() + "\n";
+      currentLine = word + " ";
+    } else {
+      currentLine += word + " ";
+    }
+  });
+
+  return formattedText + currentLine.trim();
+}
+
