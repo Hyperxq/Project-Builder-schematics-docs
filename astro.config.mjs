@@ -138,11 +138,11 @@ export default defineConfig({
       head: [
         {
           tag: "meta",
-          attrs: { property: "og:image", content: "https://schematics.pbuilder.dev/og.jpg?v=1" },
+          attrs: { property: "og:image", content: "https://schematics.pbuilder.dev/og.png?v=1" },
         },
         {
           tag: "meta",
-          attrs: { property: "twitter:image", content: "https://schematics.pbuilder.dev/og.jpg?v=1" },
+          attrs: { property: "twitter:image", content: "https://schematics.pbuilder.dev/og.png?v=1" },
         },
       ],
     }),
