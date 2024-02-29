@@ -5,14 +5,16 @@ import Default from '@astrojs/starlight/components/Head.astro'
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
 const ogImageUrl = new URL(
-  `/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
+  `/open-graph/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
   Astro.site,
 )
+const imageSrc = ogImageUrl ?? '/default-og-image.png';
+const canonicalImageSrc = new URL(imageSrc, Astro.site);
 ---
 
 <!-- Render the default <Head/> component. -->
 <Default {...Astro.props}><slot /></Default>
 
 <!-- Render the <meta/> tags for the Open Graph images. -->
-<meta property="og:image" content={ogImageUrl} />
-<meta property="twitter:image" content={ogImageUrl} />
+<meta property="og:image" content={canonicalImageSrc} />
+<meta name="twitter:image" content={canonicalImageSrc} />

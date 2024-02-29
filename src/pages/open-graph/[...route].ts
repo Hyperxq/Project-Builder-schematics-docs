@@ -1,30 +1,70 @@
-// src/pages/open-graph/[...route].ts
-
 import { OGImageRoute } from "astro-og-canvas";
+import { getCollection } from "astro:content";
+
+type OGImageOptions = Awaited<ReturnType<Parameters<typeof OGImageRoute>[0]["getImageOptions"]>>;
+// Get all entries from the `docs` content collection.
+const entries = await getCollection("docs");
+
+// Map the entry array to an object with the page ID as key and the
+// frontmatter data as value.
+const pages = Object.fromEntries(entries.map(({ data, id }) => [id, { data }]));
 
 export const { getStaticPaths, GET } = OGImageRoute({
-  // Tell us the name of your dynamic route segment.
-  // In this case it’s `route`, because the file is named `[...route].ts`.
   param: "route",
 
-  // A collection of pages to generate images for.
-  // The keys of this object are used to generate the path for that image.
-  // In this example, we generate one image at `/open-graph/example.png`.
-  pages: {
-    og: {
-      title: "Schematics Docs",
-      description: "Start automate you code as soon as possible!",
-    },
-  },
-  // pages: await import.meta.glob('/src/content/docs/**/*.md', { eager: true }),
+  pages,
 
-  // For each page, this callback will be used to customize the OpenGraph image.
-  getImageOptions: (path, page) => ({
-    title: page.title,
-    description: page.description,
-    logo: {
-      path: "./public/og.png",
-    },
-    // There are a bunch more options you can use here!
-  }),
+  getImageOptions: async (_, { data }: (typeof pages)[string]): Promise<OGImageOptions> => {
+    return {
+      title: data.title,
+      description: data.description,
+      border: { width: 32, side: "inline-start" },
+      padding: 40,
+      logo: {
+        path: "./src/pages/open-graph/_images/docs-logo.png",
+        size: [300],
+      },
+      bgImage: {
+        path: `./src/pages/open-graph/_images/background-ltr.png`,
+      },
+      font: {
+        title: {
+          size: 72,
+          lineHeight: 1.1,
+          families: ["Obviously", "Inter", "Noto Sans", "Noto Sans Arabic", "Noto Sans SC", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR"],
+          weight: "Medium",
+          color: [255, 255, 255],
+        },
+        description: {
+          size: 42,
+          lineHeight: 1.1,
+          families: ["Inter", "Noto Sans", "Noto Sans Arabic", "Noto Sans SC", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR"],
+          weight: "Normal",
+          color: [191, 193, 201],
+        },
+      },
+      fonts: [
+        "./src/pages/open-graph/_fonts/inter/inter-400-normal.ttf",
+        "./src/pages/open-graph/_fonts/inter/inter-500-normal.ttf",
+
+        "./src/pages/open-graph/_fonts/noto-sans/noto-400-normal.ttf",
+        "./src/pages/open-graph/_fonts/noto-sans/noto-500-normal.ttf",
+
+        "./src/pages/open-graph/_fonts/noto-sans/chinese-simplified-400-normal.otf",
+        "./src/pages/open-graph/_fonts/noto-sans/chinese-simplified-500-normal.ttf",
+
+        "./src/pages/open-graph/_fonts/noto-sans/chinese-traditional-400-normal.otf",
+        "./src/pages/open-graph/_fonts/noto-sans/chinese-traditional-500-normal.ttf",
+
+        "./src/pages/open-graph/_fonts/noto-sans/japanese-400-normal.ttf",
+        "./src/pages/open-graph/_fonts/noto-sans/japanese-500-normal.ttf",
+
+        "./src/pages/open-graph/_fonts/noto-sans/arabic-400-normal.ttf",
+        "./src/pages/open-graph/_fonts/noto-sans/arabic-500-normal.ttf",
+
+        "./src/pages/open-graph/_fonts/noto-sans/korean-400-normal.otf",
+        "./src/pages/open-graph/_fonts/noto-sans/korean-500-normal.ttf",
+      ].filter((val): val is string => typeof val === "string"),
+    };
+  },
 });
