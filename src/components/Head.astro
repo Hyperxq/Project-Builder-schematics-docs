@@ -15,6 +15,6 @@ const canonicalImageSrc = new URL(imageSrc, Astro.site);
 <!-- Render the default <Head/> component. -->
 <Default {...Astro.props}><slot /></Default>
 
-<!-- Render the <meta/> tags for the Open Graph images. -->
+<!-- Render the <meta/> tags for the Open Graph images -->
 <meta property="og:image" content={canonicalImageSrc} />
 <meta name="twitter:image" content={canonicalImageSrc} />
