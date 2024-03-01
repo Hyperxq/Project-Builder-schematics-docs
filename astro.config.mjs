@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
 import sitemap from '@astrojs/sitemap';
+import compressor from "astro-compressor";
 
+// https://astro.build/config
 export default defineConfig({
   site: "https://schematics.pbuilder.dev",
   integrations: [
@@ -70,7 +72,6 @@ export default defineConfig({
               label: "SchematicContext",
               link: "/core-concepts/schematic-context",
             },
-
             {
               label: "Schema JSON",
               link: "/core-concepts/schema-json",
@@ -84,7 +85,6 @@ export default defineConfig({
               label: "How to start with files?",
               link: "/files/how-to-start",
             },
-
             {
               label: "Add Files",
               link: "/files/add",
@@ -137,6 +137,7 @@ export default defineConfig({
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [],
     }),
-    sitemap()
+    sitemap(),
+    compressor({ gzip: true, brotli: true }),
   ],
 });

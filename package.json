@@ -14,6 +14,7 @@
     "@astrojs/starlight": "^0.20.1",
     "@astrojs/starlight-docsearch": "0.1.0",
     "astro": "^4.3.5",
+    "astro-compressor": "0.4.1",
     "astro-expressive-code": "0.33.4",
     "astro-og-canvas": "0.4.2",
     "sass": "1.71.1",
