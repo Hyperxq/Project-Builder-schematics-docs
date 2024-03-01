@@ -11,6 +11,12 @@ When you want to start creating schematics, you likely have two questions:
 
 To create schematics, you need to create an npm project library.
 
+Install the schematics CLI:
+
+```ansi title="installation"
+[38;2;127;86;217mnpm i -g[0m [38;2;0;134;201m@angular-devkit/schematics-cli[0m
+```
+
 Execute:
 
 ```ansi title="installation"
