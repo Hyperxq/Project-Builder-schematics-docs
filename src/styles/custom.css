@@ -35,4 +35,7 @@
   --sl-color-gray-7: var(--colors-gray-cool-50);
   --sl-color-black: #ffff;
   }
-  
+
+a.sl-flex.action.primary {
+    font-weight: 600;
+}
