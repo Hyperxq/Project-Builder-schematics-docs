@@ -17,6 +17,8 @@
     "astro-compressor": "0.4.1",
     "astro-expressive-code": "0.33.4",
     "astro-og-canvas": "0.4.2",
+    "astro-purgecss": "4.1.0",
+    "purgecss": "5.0.0",
     "sass": "1.71.1",
     "sharp": "^0.32.5",
     "typescript": "^5.3.3"

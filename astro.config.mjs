@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from "@astrojs/starlight";
 import sitemap from '@astrojs/sitemap';
 import compressor from "astro-compressor";
+import purgecss from 'astro-purgecss';
 
 // https://astro.build/config
 export default defineConfig({
@@ -139,5 +140,6 @@ export default defineConfig({
     }),
     sitemap(),
     compressor({ gzip: true, brotli: true }),
+    purgecss(),
   ],
 });
