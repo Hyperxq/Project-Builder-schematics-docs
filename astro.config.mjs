@@ -3,7 +3,7 @@ import starlight from "@astrojs/starlight";
 import sitemap from '@astrojs/sitemap';
 import compressor from "astro-compressor";
 import purgecss from 'astro-purgecss';
-
+import favicons from "astro-favicons";
 // https://astro.build/config
 export default defineConfig({
   site: "https://schematics.pbuilder.dev",
@@ -141,5 +141,10 @@ export default defineConfig({
     sitemap(),
     compressor({ gzip: true, brotli: true }),
     purgecss(),
+    favicons({
+      masterPicture: "./public/favicon.svg",
+      emitAssets: true,
+      faviconsDarkMode: true,
+    }),
   ],
 });

@@ -16,6 +16,7 @@
     "astro": "^4.3.5",
     "astro-compressor": "0.4.1",
     "astro-expressive-code": "0.33.4",
+    "astro-favicons": "2.0.2",
     "astro-og-canvas": "0.4.2",
     "astro-purgecss": "4.1.0",
     "purgecss": "5.0.0",
