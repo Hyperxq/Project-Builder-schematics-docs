@@ -14,7 +14,7 @@ To create schematics, you need to create an npm project library.
 Execute:
 
 ```ansi title="installation"
-[38;2;127;86;217mnpx @danils/project-builder-cli[0m [38;2;0;134;201mnew[0m [38;2;23;178;106m<project-name> [author][0m [38;2;133;136;142m--bundler=rollup[0m
+[38;2;127;86;217mnpx @danils/project-builder-cli[0m [38;2;0;134;201mnew[0m [38;2;23;178;106m<project-name> [author][0m
 ```
 
 - The author is optional.
