@@ -1,22 +1,28 @@
 ---
-import type { Props } from '@astrojs/starlight/props'
-import Default from '@astrojs/starlight/components/Head.astro'
+import type { Props } from "@astrojs/starlight/props";
+import Default from "@astrojs/starlight/components/Head.astro";
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
 const ogImageUrl = new URL(
-  `/open-graph/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
-  Astro.site,
-)
-const imageSrc = ogImageUrl ?? '/default-og-image.png';
+  `/open-graph/${Astro.props.id.replace(/\.\w+$/, ".png")}`,
+  Astro.site
+);
+const imageSrc = ogImageUrl ?? "/default-og-image.png";
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
 ---
 
-<meta name="title" content="Schematics Docs" />
-<meta name="description" content="The best place to find documentation about Schematics for Javascript" />
-<meta name="keywords" content="Schematics, Angular Schematics, Schematics Javascript, Schematics Documentation, Schematics Docs">
+<meta name="title" content="Schematics Documentation" />
+<meta
+  name="description"
+  content="Explore comprehensive Schematics Documentation for Angular and Javascript. Learn how Schematics Docs can streamline your project development."
+/>
+<meta
+  name="keywords"
+  content="Schematics, Schematics Documentation, Schematics Docs, Angular Schematics, Schematics Javascript, Schematics Tutorial, Schematics for Angular Developers, Javascript Schematics Guide, Schematics Library, Schematics Development, How to use Schematics with Angular, Schematics Javascript Integration, Learning Schematics for Web Development, Advanced Schematics Documentation, Building Projects with Schematics"
+/>
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <!-- Render the default <Head/> component. -->
 <Default {...Astro.props}><slot /></Default>
 
