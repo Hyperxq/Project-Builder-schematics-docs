@@ -20,7 +20,7 @@ Install the schematics CLI:
 Execute:
 
 ```ansi title="installation"
-[38;2;127;86;217mnpx @danils/project-builder-cli[0m [38;2;0;134;201mnew[0m [38;2;23;178;106m<project-name> [author][0m
+[38;2;127;86;217mnpx @pbuilder/cli[0m [38;2;0;134;201mnew[0m [38;2;23;178;106m<project-name> [author][0m
 ```
 
 - The author is optional.
@@ -35,7 +35,7 @@ If you plan to use the CLI frequently, you can install it:
 Execute:
 
 ```ansi
-npm i -g [38;2;127;86;217m@danils/project-builder-cli[0m 
+npm i -g [38;2;127;86;217m@pbuilder/cli[0m 
 ```
 :::
 
@@ -52,7 +52,7 @@ There are two options or scenarios:
 1. If you want to run the schematics only once and are not interested in installing them permanently, you can execute:
 
 ```ansi wrap preserveIndent title="CLI not installed"
-[38;2;127;86;217mnpx @danils/project-builder-cli[0m [38;2;0;134;201mexecute[0m [38;2;23;178;106m<collection-name> <schematic-name>[0m  [38;2;133;136;142m—[all options separated by two dashes][0m
+[38;2;127;86;217mnpx @pbuilder/cli[0m [38;2;0;134;201mexecute[0m [38;2;23;178;106m<collection-name> <schematic-name>[0m  [38;2;133;136;142m—[all options separated by two dashes][0m
 ```
 
 ```ansi title="CLI installed"
@@ -62,7 +62,7 @@ There are two options or scenarios:
 1. If you would like to keep the schematics installed, you can execute:
 
 ```ansi title="CLI not installed"
-[38;2;127;86;217mnpx @danils/project-builder-cli[0m [38;2;0;134;201madd[0m [38;2;23;178;106m<collection-name>[0m [38;2;133;136;142m—[all options separated by two dashes][0m
+[38;2;127;86;217mnpx @pbuilder/cli[0m [38;2;0;134;201madd[0m [38;2;23;178;106m<collection-name>[0m [38;2;133;136;142m—[all options separated by two dashes][0m
 ```
 
 ```ansi title="CLI installed"

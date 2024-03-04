@@ -14,7 +14,7 @@ https://bobbyhadz.com/blog/unable-to-load-schema-from-vscode-cannot-open.
 ## Create a schematic project
 **Execute:**
 ```ansi
-[38;2;127;86;217mnpx @danils/project-builder-cli@latest[0m [38;2;23;178;106m<library-name> [author][0m
+[38;2;127;86;217mnpx @pbuilder/cli@latest[0m [38;2;23;178;106m<library-name> [author][0m
 ```
 ## Builder-add schematic
 You will see a folder named `builder-add`. This folder is for a schematic that is intended to perform actions not only after installing your schematics into your project but also before the installation to apply additional settings. Follow these instructions:
