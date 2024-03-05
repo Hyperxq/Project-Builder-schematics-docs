@@ -19,3 +19,20 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+public/android-chrome-192x192.png
+public/android-chrome-512x512.png
+public/apple-touch-icon.png
+public/browserconfig.xml
+public/favicon-16x16-dark.png
+public/favicon-16x16.png
+public/favicon-32x32-dark.png
+public/favicon-32x32.png
+public/favicon-48x48-dark.png
+public/favicon-48x48.png
+public/favicon-dark.ico
+public/favicon.ico
+public/manifest.webmanifest
+public/mstile-150x150.png
+public/safari-pinned-tab.svg
+public/yandex-browser-50x50.png
+public/yandex-browser-manifest.json
