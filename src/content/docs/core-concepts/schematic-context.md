@@ -60,3 +60,15 @@ By leveraging `addTask`, you receive a `TaskId` in return, which can be used to 
 2. **Code Modularity**: For better organization and reusability, you might break down your schematic logic into smaller, reusable Schematics. This is especially useful for repetitive tasks like installing several packages. Choosing Schematics over simple functions allows you to utilize the dependency system, giving you control over the execution order of these tasks.
 
 The `addTask` method is a powerful tool in the SchematicContext arsenal, not only enabling the execution of external processes but also promoting code modularity and maintainability by making full use of the built-in dependency management system.
+
+## Logging in Schematics
+
+Logging is essential for enhancing the user experience in Angular Schematics. It is performed through the `logger` object in `SchematicContext`, allowing developers to emit messages during a Schematic's execution. Unlike standard `console.log`, `context.logger` integrates seamlessly with the Schematic Library, ensuring consistent and controlled output. This feature supports different log levels, empowering developers to provide timely and appropriate feedback, such as debug information, general info, warnings, and errors. It's a crucial tool for clear communication and effective troubleshooting.
+
+| Log Level | Method                          | Description                                                                                                     |
+| --------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Debug     | `context.logger.debug(message)` | Used for detailed debugging information that is usually only of interest during development or troubleshooting. |
+| Info      | `context.logger.info(message)`  | General information about the execution process. Suitable for messages you always want to show.                 |
+| Warn      | `context.logger.warn(message)`  | Warnings about potentially harmful situations or consequences that are not necessarily errors.                  |
+| Error     | `context.logger.error(message)` | Error messages indicating that something has gone wrong during the execution of the schematic.                  |
+| Fatal     | `context.logger.fatal(message)` | Critical errors causing the process to terminate. Used for unrecoverable errors.                                |
