@@ -1,40 +1,31 @@
 ---
-title: What is a schematic?
+title: Why Use Schematics?
 description: An introduction to schematics world.
 ---
 
-A schematic is a powerful tool designed to automate code generation. In the Angular ecosystem, it plays a pivotal role in streamlining code creation.
-
-We'll explore the schematic libraries, highlighting that its utility transcends Angular—you don't need Angular knowledge to leverage its code generation capabilities.
-
-**Does this sound complicated?** It's more straightforward than it seems. At its core, a schematic is a function that creates, updates, or deletes files, enhanced with tools to facilitate these tasks.
-
-**Why Use Schematics Instead of the Node File System?**
-
-The Node File System (FS) is a module for file interaction. Yet, code generation requires additional considerations, such as:
-
-1. **Error Handling**:  How are errors managed during the process?
-2. **Execution Dependencies**: How can we ensure some actions precede others?
-3. **Tooling**: What utilities can simplify the process?
-
-Schematics streamline the file manipulation process, introducing features that improve the code automation experience.
-
-## **The Importance of Learning About Schematics**
-
-Automating repetitive tasks is not just a convenience but a necessity in contemporary software development. Automating setups like Linters, Formatters, Git Hooks, GraphQL, scaffolding code, SCSS structure, and HTML cleanup can save a significant amount of time. While manually configuring these elements has educational benefits initially, automation becomes more valuable once you grasp the basics.
 
 
-## **How can I create Schematics?**
+## Introduction
 
-It's crucial to understand that Schematics are not limited to Angular projects. Their primary function is code generation, a task that is framework-agnostic. Although Angular provides specific tools for this purpose, the principles behind creating schematics are universally applicable. This guide will help you use these tools to create schematics for any JS environment.
+Imagine you have a magic wand that can instantly create, modify, or organize your project files exactly how you want them, without any mistakes. That's what schematics do for software development. They automate tasks that would usually take hours and ensure everything is done correctly every time. Here's why schematics are a game-changer:
 
-## **Schematics concepts**
+![Why-schematics](../../assets/why-schematics.webp)
 
-The public API for schematics introduces classes representing fundamental concepts:
+1. **Save Time on Repetitive Tasks:**
+Manual tasks like creating components, services, or setting up configurations take time and can be repetitive. Schematics can do all these tasks in seconds, letting you focus on writing the unique parts of your code.
 
-- The virtual file system is represented by a `Tree`. The `Tree` data structure contains a *base* (a set of files that already exists) and a *staging area* (a list of changes to be applied to the base). When making modifications, you don't actually change the base, but add those modifications to the staging area.
-- A `Rule` object defines a function that takes a `Tree`, applies transformations, and returns a new `Tree`. The main file for a schematic, `index.ts`, defines a set of rules that implement the schematic's logic.
-- A transformation is represented by an `Action`. There are four action types: `Create`, `Rename`, `Overwrite`, and `Delete`.
-- Each schematic runs in a context, represented by a `SchematicContext` object.
+2. **Ensure Consistency:**
+When working on a project with a team, maintaining consistent coding standards and file structures is crucial. Schematics ensure that every file or feature added follows the project's guidelines, reducing the chances of errors or inconsistencies.
 
-The context object passed into a rule provides access to utility functions and metadata that the schematic might need to work with, including a logging API to help with debugging. The context also defines a *merge strategy* that determines how changes are merged from the staged tree into the base tree. A change can be accepted or ignored, or throw an exception.
+3. **Simplify Complex Tasks:**
+Some coding tasks are complex and prone to human error, especially under tight deadlines. Schematics can automate complex setups or configurations, ensuring they are done accurately and efficiently.
+
+4. **Customizable for Your Needs:**
+Whether you're working on an Angular project or not, schematics are highly customizable. You can create your own schematics to fit the specific needs of your project, making your development process even more streamlined.
+
+5. **Learn Once, Use Everywhere:**
+Once you get the hang of using schematics, you can apply them to any JavaScript project, not just Angular. This makes schematics a valuable skill in your developer toolkit.
+
+## In Conclusion
+
+Schematics are like having a superpower for your development process. They make your work faster, ensure consistency across your projects, simplify complex tasks, and are adaptable to your specific needs. For anyone new to the world of development or looking to level up their productivity, learning to use schematics is a smart move.

@@ -1,5 +1,5 @@
 ---
-title: SchematicContext
+title: Schematic Context
 description: What is schematic context?.
 ---
 

@@ -36,7 +36,7 @@ export default defineConfig({
               link: "/installation",
             },
             {
-              label: "Why schematics",
+              label: "Why Use Schematics?",
               link: "/why-schematics",
             },
           ],
@@ -47,6 +47,14 @@ export default defineConfig({
             {
               label: "My first schematic",
               link: "/tutorials/my-first-schematic",
+            },
+            {
+              label: "How to install dependencies?",
+              link: "/tutorials/install-dependencies",
+            },
+            {
+              label: "How to test your schematic library?",
+              link: "/tutorials/test-your-schematic",
             },
             {
               label: "When to use Rules or call other schematics?",
@@ -70,7 +78,7 @@ export default defineConfig({
               link: "/core-concepts/tree",
             },
             {
-              label: "SchematicContext",
+              label: "Schematic Context",
               link: "/core-concepts/schematic-context",
             },
             {
@@ -134,6 +142,10 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: "Limitations",
+          link: "/limitations"
+        }
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [],

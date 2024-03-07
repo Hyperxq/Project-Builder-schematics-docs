@@ -5,27 +5,42 @@ description: An introduction to the world of schematics.
 
 ## Introduction
 
-When you start a new Schematic Project you will face something like this:
+When embarking on a new Schematics project, you will encounter a structure that looks like this:
 
 ![Project Base](../../../assets/project-base-scaffolding.webp)
 
-- Inside `src` you will have a file named: `collection.json`. This files is the most important files because it has all the information about schematics. If you don't declare here you won't use it.
-- Two folders named: `builder-add` and `builder-generate`. `builder-add` is an special schematics that will execute when you install into your project with `builder add [collection-name]` and `builder-generate` contains all the schematics.
+- Within the `src` directory is a vital file named `collection.json`. This file is central to your Schematics project as it contains all the schematics' definitions. Without proper declarations here, the schematics cannot be utilized.
+- There are two noteworthy folders: `builder-add` and `builder-generate`. The `builder-add` folder includes special schematics that are triggered upon integrating the library into your project with `builder add [collection-name]`. The `builder-generate` folder encompasses all your schematics.
 
-## Importand files
+## Important Files
+
 ### collection.json
 
-This JSON file encapsulates details about all schematics within your project, dictating the declaration for each schematic. It's what the CLI references upon using your library. Each schematic in the collection must define several properties, as shown in the example below.
+Imagine `collection.json` as the table of contents for your Schematic project. This file acts as a central directory, listing all the Schematics you've created or included in your project. It tells the Builder CLI what Schematics are available, how to find them, and some basic details about each one, like what they do and how they should be run.
 
-| Property    | Type             | Optional | Default |
-| ----------- | ---------------- | -------- | ------- |
-| Description | string           | true     |         |
-| Factory     | string           | true     |         |
-| Schema      | string           | false    |         |
-| Hidden      | boolean          | false    | false   |
-| Extends     | string           | false    |         |
-| Private     | Boolean          | false    | false   |
-| aliases     | array of strings | false    |         |
+Each entry in `collection.json` represents a single Schematic. For each Schematic, you'll provide:
+
+- **Description**: A brief explanation of what the Schematic does. This helps users understand the purpose of the Schematic.
+- **Factory**: The path to the factory file for the Schematic. This links your Schematic to its instructions, telling the CLI how to execute the Schematic.
+- **Schema**: The path to the schema file, which defines the options or configurations users can set when running the Schematic.
+- **Hidden**: A boolean indicating whether the Schematic should be hidden from lists in the CLI. Useful for internal or experimental Schematics.
+- **Extends**: (If applicable) Indicates if your Schematic extends another, inheriting its functionality.
+- **Private**: A boolean to mark if the Schematic is intended for private use and shouldn't be executed directly by end-users.
+- **Aliases**: Shortcuts or alternative names for running the Schematic. This makes it easier to use.
+
+Here's an analogy: if your Schematic project were a book, `collection.json` would be its table of contents, and each Schematic would be a chapter listed in it, with a summary (description) and a page number (path to the factory file).
+
+By organizing your Schematics in the `collection.json` file, you make it easy for the Builder CLI (and users of your library) to discover and use the Schematics you've developed.
+
+| Property    | Type             | Optional |
+| ----------- | ---------------- | :------: |
+| description | string           |   Yes    |
+| factory     | string           |   Yes    |
+| schema      | string           |    No    |
+| hidden      | boolean          |    No    |
+| extends     | string           |    No    |
+| private     | boolean          |    No    |
+| aliases     | array of strings |    No    |
 
 We can see an example of a collection:
 
@@ -77,7 +92,20 @@ We can see an example of a collection:
 ```
 
 ### schema.json
-This file outlines the prompts presented to users before the factory initiates, dictating the interaction flow.
 
-### factory file
-The name of this file refers to a specific factory and must be consistently referenced in the collection.json for each schematic.
+This file outlines the prompts presented to users before a schematic is executed, dictating the interaction flow and ensuring a smooth user experience. [more details](/terminal/user-inputs)
+
+### Factory File
+
+Think of a factory file as the brain behind each Schematic in your project. This file contains the specific instructions, or "blueprint," that tells your Schematic what to do when it's run. For example, whether to add a new component, modify an existing file, or generate a new service, the factory file has the code to make it happen.
+
+When you define a Schematic in your `collection.json`, you link it to its factory file. This link ensures that when your Schematic is executed, the Builder CLI knows exactly where to find the instructions to carry out the Schematic's intended actions.
+
+Here's a simple way to understand it:
+
+- **Schematic**: A command or task you want to run.
+- **Factory File**: The detailed instructions on how the task is performed.
+
+For every Schematic you create, there will be a corresponding factory file that contains the logic for that Schematic. The name and location of this file are specified in your `collection.json`, ensuring a direct connection between the command and its execution logic.
+
+In essence, without the factory file, your Schematic wouldn't know what to do. It's crucial for executing the specific tasks you've designed in your Schematics project.
