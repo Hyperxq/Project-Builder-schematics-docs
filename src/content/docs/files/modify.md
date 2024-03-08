@@ -3,25 +3,27 @@ title: How to modify files?
 description: How to add files?
 ---
 ## Introduction
+
 When we need to modify files is more complex than add or modify files. Because, when you modify a file you need to know where you want
-to add, modify, delete code. 
+to add, modify, delete code.
 In this section, we will know to do it.
 
 ## JSON files
+
 To modify json files is not complex. Let me show you.
 For this example, we will update the package.json:
 
 ```tsx
 export function updatePackageJson(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-		const filePath = '/package.json';
-		// Here we'll check if the file exists:
+  const filePath = '/package.json';
+  // Here we'll check if the file exists:
     if (!tree.exists(filePath)) {
       _context.logger.warn(`The file ${filePath} doesn't exist.`);
       return tree;
     }
-		//Then we'll read the file
-		const content = tree.read(filePath);
+  //Then we'll read the file
+  const content = tree.read(filePath);
     if (!content) {
       _context.logger.warn(`Failed to read the file ${filePath}.`);
       return tree;
@@ -30,21 +32,23 @@ export function updatePackageJson(_options: any): Rule {
     const jsonStr = content.toString('utf-8');
     const packageJson = JSON.parse(jsonStr);
 
-		// Modify the package.json object
+  // Modify the package.json object
     // Example: Add a dependency
     const dependencyName = '@example/dependency';
     const dependencyVersion = '^1.0.0';
     packageJson.dependencies = packageJson.dependencies || {};
     packageJson.dependencies[dependencyName] = dependencyVersion;
 
-		// Serialize the modified object and write it back
+  // Serialize the modified object and write it back
     tree.overwrite(filePath, JSON.stringify(packageJson, null, 2));
-	}
+ }
 }
 ```
 
 ## Typescript/Javascript files
+
 Will modify this file:
+
 ```typescript
 export const tags = [
    "Typescript", "Javascript", "CSS"
@@ -56,9 +60,11 @@ export function printTags() {
 ```
 
 ### Problem to solve
+
 We need to add a new tags to the code, for this reason we need to modify the line 2.
 
 ### Code to solve the problem
+
 ```typescript
 import { Tree } from "@angular-devkit/schematics";
 import { ArrayLiteralExpression, isArrayLiteralExpression, isIdentifier, ScriptTarget, SourceFile, createSourceFile, Node, isVariableDeclaration, forEachChild } from "typescript";
@@ -126,8 +132,7 @@ function replaceNodeTextInFileContent(fileContent: string, node: Node, newText: 
 
 ```
 
-
 ### Conclusion
 
-When you are modifying a file, you will use NodeJS to treat this file as a array of Node. 
+When you are modifying a file, you will use NodeJS to treat this file as a array of Node.
 This will help you to find the exact point where are the code to insert or modify.

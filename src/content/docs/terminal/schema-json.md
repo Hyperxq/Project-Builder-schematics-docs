@@ -4,10 +4,16 @@ description: How to show questions before factory function execution.
 ---
 
 ## Introduction
+
 The most common way is when we need to show questions in the terminal and we need these answers before
 the function factory start.
 
+:::caution
+In the `schema.json` files you could declare inputs as objects. However, you could not pass JS object in terminal.
+:::
+
 ## Code section
+
 For this purpose, we have a property inside collection named: schema
 
 ```json
@@ -48,7 +54,6 @@ This file will contain all the questions and It will send to the factory functio
   ]
 }
 ```
-
 
 ```typescript
 import {Tree, Rule, SchematicContext} from '@angular-devkit/schematics';
