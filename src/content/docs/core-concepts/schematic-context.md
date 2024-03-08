@@ -87,6 +87,7 @@ export function logCustomMessage(): Rule {
   };
 }
 ```
+
 Logging is crucial for a good user experience. With different log levels (`debug`, `info`, `warn`, `error`, `fatal`), you can provide the right amount of detail, ensuring users know what's happening and what to do next if there's an issue.
 
 | Log Level | Method                          | Description                                                                                                     |
@@ -96,7 +97,6 @@ Logging is crucial for a good user experience. With different log levels (`debug
 | Warn      | `context.logger.warn(message)`  | Warnings about potentially harmful situations or consequences that are not necessarily errors.                  |
 | Error     | `context.logger.error(message)` | Error messages indicating that something has gone wrong during the execution of the schematic.                  |
 | Fatal     | `context.logger.fatal(message)` | Critical errors causing the process to terminate. Used for unrecoverable errors.                                |
-
 
 ## In Conclusion
 

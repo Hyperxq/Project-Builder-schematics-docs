@@ -22,13 +22,13 @@ However, as you may have observed, a factory function typically returns only one
 | `noop`               | A rule that does nothing.                                                  | None                                                   | `Rule`      |
 | `filter`             | Filters files from the input tree based on a predicate.                    | `predicate: FilePredicate<boolean>`                    | `Rule`      |
 
-
 Don't worry if you don't know how to use all of them. I will create tutorial for all cases.
 
 :::note
 
 For the current version (**17.2.0**)  of `@angular-devkit/schematics` the behavior is this:
-- When you are using multiples rules in a factory function you can *Add* / *Modify* / *Delete* files. However the execution order, no matter the position of the rules are: First will create files, then make the modifications and finally all file deletions. 
+
+- When you are using multiples rules in a factory function you can *Add* / *Modify* / *Delete* files. However the execution order, no matter the position of the rules are: First will create files, then make the modifications and finally all file deletions.
 
 This is important, because in some cases you would like to create a files and after the make a modification in this files. That happen a lot when you are calling other schematics as rules.
 

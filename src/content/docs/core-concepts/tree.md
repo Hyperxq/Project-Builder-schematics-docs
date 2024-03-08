@@ -99,5 +99,3 @@ tree.rename('/old/path', '/new/path');
 ## Conclusion
 
 By leveraging these methods, developers can efficiently manipulate the project's file system within their schematics, from simple read and write operations to more complex structural changes.
-
-This revised version includes concise descriptions for the `Tree` object methods and illustrative code examples to help newcomers grasp the concepts more easily.
