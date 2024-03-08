@@ -23,6 +23,7 @@ export default defineConfig({
       components: {
         // Relative path to the custom component.
         Head: "./src/components/Head.astro",
+        TableOfContents: './src/components/TableOfContents.astro',
       },
       social: {
         github: "https://github.com/Hyperxq/Project-Builder-schematics-docs",
