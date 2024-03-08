@@ -1,5 +1,5 @@
 ---
-title:  Logging in Angular Schematics context.logger vs Winston
+title:  Logging in Schematics vs Winston
 description: Description of what is the Tree object and what method has.
 ---
 

@@ -3,9 +3,9 @@ title: Schematic Context
 description: What is schematic context?.
 ---
 
-## Introduction
+## What is Schematic Context?
 
-The `SchematicContext` is an essential parameter provided to Rule factory functions in Schematics, acting as the second argument after `Tree`. While `Tree` deals with the file system, representing files and their hierarchy, `SchematicContext` offers a broader perspective, giving you tools and capabilities for the current execution of a schematic. This includes:
+When you create a schematic, you're given a toolbox called `SchematicContext`. It comes right after the `Tree` parameter in your schematic functions. If `Tree` helps you manage files and folders, think of `SchematicContext` as your magic wand for everything else - from running additional tasks to logging messages during your schematic's journey.
 
 ```typescript title="Adding Tasks"
 import { NodePackageInstallTask, Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
@@ -35,14 +35,27 @@ export function logCustomMessage(): Rule {
 }
 ```
 
-## Adding Tasks
+## Adding Tasks with SchematicContext
 
-In the world of Schematics, our main objective is usually to modify files by applying Rules. Sometimes, though, our tasks extend beyond simple file manipulation, requiring us to:
+Ever found yourself needing more than just file changes? Like installing a new package or running another schematic? That's where `SchematicContext` shines. It has a method called `addTask` that lets you schedule these extra steps.
 
-- **Invoke another Schematic**.
-- **Install NPM Dependencies After Adding a New Package**.
+```typescript
+// Example: Adding a dependency and installing it
+import { NodePackageInstallTask, Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 
-This is where `SchematicContext` shines with its `addTask` method. `addTask` allows you to schedule additional operations, such as running an external schematic or installing npm packages, enhancing the functionality of your schematic.
+export function addDependencyAndInstall(): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    // Your code to modify package.json
+    context.addTask(new NodePackageInstallTask());
+    return tree;
+  };
+}
+```
+
+### Why use addTask?
+
+- It lets you run tasks in a specific order, thanks to dependencies you can define.
+- It makes your schematic modular by allowing you to call other schematics, keeping your code organized.
 
 ### Parameters of `addTask`
 
@@ -61,9 +74,20 @@ By leveraging `addTask`, you receive a `TaskId` in return, which can be used to 
 
 The `addTask` method is a powerful tool in the SchematicContext arsenal, not only enabling the execution of external processes but also promoting code modularity and maintainability by making full use of the built-in dependency management system.
 
-## Logging in Schematics
+## How to Log Messages
 
-Logging is essential for enhancing the user experience in Angular Schematics. It is performed through the `logger` object in `SchematicContext`, allowing developers to emit messages during a Schematic's execution. Unlike standard `console.log`, `context.logger` integrates seamlessly with the Schematic Library, ensuring consistent and controlled output. This feature supports different log levels, empowering developers to provide timely and appropriate feedback, such as debug information, general info, warnings, and errors. It's a crucial tool for clear communication and effective troubleshooting.
+`SchematicContext` also provides a way to log messages, making it easier to communicate what your schematic is doing or if something goes wrong.
+
+```typescript
+// Example: Logging a custom message
+export function logCustomMessage(): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    context.logger.log('info', '🔔 Custom message from your Schematic.');
+    return tree;
+  };
+}
+```
+Logging is crucial for a good user experience. With different log levels (`debug`, `info`, `warn`, `error`, `fatal`), you can provide the right amount of detail, ensuring users know what's happening and what to do next if there's an issue.
 
 | Log Level | Method                          | Description                                                                                                     |
 | --------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -72,3 +96,10 @@ Logging is essential for enhancing the user experience in Angular Schematics. It
 | Warn      | `context.logger.warn(message)`  | Warnings about potentially harmful situations or consequences that are not necessarily errors.                  |
 | Error     | `context.logger.error(message)` | Error messages indicating that something has gone wrong during the execution of the schematic.                  |
 | Fatal     | `context.logger.fatal(message)` | Critical errors causing the process to terminate. Used for unrecoverable errors.                                |
+
+
+## In Conclusion
+
+`SchematicContext` is your partner in crime for making schematics do more than just file operations. Whether it's running additional tasks with `addTask` or keeping users informed with logging, it empowers you to create more dynamic, useful, and user-friendly schematics.
+
+Remember, while Tree manages your project's files, `SchematicContext` manages everything else, helping you automate tasks, call other schematics, and communicate effectively with your users.
