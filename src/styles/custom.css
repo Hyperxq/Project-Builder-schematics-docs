@@ -2,6 +2,7 @@
 
 /* Dark mode colors. */
 :root {
+  --sl-color-accent_hover: white;
   --sl-content-width: 55rem;
   --sl-nav-height: 4rem;
   --sl-nav-pad-y: .75rem;
@@ -9,6 +10,7 @@
 
   --sl-color-accent-low: var(--colors-brand-950);
   --sl-color-accent: var(--colors-brand-600);
+  --sl-color-accent_hover: var(--colors-brand-700);
   --sl-color-accent-high: var(--colors-brand-400);
   --sl-color-white: var(--colors-brand-50);
   --sl-color-gray-1: var(--colors-gray-cool-50);
@@ -24,6 +26,7 @@
   :root[data-theme='light'] {
   --sl-color-accent-low: var(--colors-brand-400);
   --sl-color-accent: var(--colors-brand-600);
+  --sl-color-accent_hover: var(--colors-brand-700);
   --sl-color-accent-high: var(--colors-brand-950);
   --sl-color-white: var(--colors-gray-blue-900);
   --sl-color-gray-1: var(--colors-gray-cool-950);
@@ -38,4 +41,21 @@
 
 a.sl-flex.action.primary {
     font-weight: 600;
+}
+
+
+.right-sidebar {
+  width: fit-content;
+}
+
+.actions {
+  gap: 1rem 1rem;
+}
+
+.action.primary:hover {
+  background: var(--sl-color-accent_hover);
+}
+
+.action.secondary:hover {
+  background: var(--sl-color-gray-7);
 }

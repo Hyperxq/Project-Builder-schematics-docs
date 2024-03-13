@@ -19,11 +19,13 @@ export default defineConfig({
           borderRadius: "0.5rem",
         },
       },
-      title: "Schematics Docs",
+      title: "Schematics Documentation",
+      description: "Explore comprehensive Schematics Documentation for Angular and Javascript.",
       components: {
         // Relative path to the custom component.
         Head: "./src/components/Head.astro",
         TableOfContents: './src/components/TableOfContents.astro',
+        // PageSidebar: './src/components/starlight/PageSidebar.astro',
       },
       social: {
         github: "https://github.com/Hyperxq/Project-Builder-schematics-docs",

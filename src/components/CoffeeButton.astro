@@ -1,0 +1,96 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+
+import { Image } from "astro:assets";
+
+import LeoOmg from "../assets/leo.webp";
+---
+
+<aside class="not-content container">
+  <div>
+    <a href="https://ko-fi.com/projectbuilder" target="_blank">
+      <h2>Do you like this content?</h2>
+    </a>
+    <p>
+      Buy me a coffee<b>→</b>
+    </p>
+  </div>
+  <div class="leo__image">
+    <Image src={LeoOmg} alt="Leo pet image" width="180" />
+  </div>
+</aside>
+
+<style>
+  aside {
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, max-content);
+
+    /* margin: 1rem 0; */
+    position: relative;
+    background-color: var(--sl-color-gray-7);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* display: flex; */
+    border: 1px solid var(--sl-color-text-accent);
+    box-shadow:
+      0px 8px 4px hsla(258, 54%, 52%, 0.03),
+      0px 5px 2px hsla(258, 54%, 52%, 0.03),
+      0px 3px 2px hsla(258, 54%, 52%, 0.06),
+      0px 1px 1px hsla(258, 54%, 52%, 0.06);
+    overflow-y: hidden;
+  }
+
+  @container (max-width: 299px) {
+    .not-content {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  }
+
+  @container (min-width: 300px) {
+    .not-content {
+      grid-template-columns: 1fr auto; /* Adjusts to 2 columns when container is wider than 300px */
+    }
+  }
+
+  aside a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  aside h2 {
+    font-size: var(--sl-text-lg) !important;
+  }
+  aside p {
+    font-size: var(--sl-text-sm) !important;
+    line-height: normal;
+  }
+  aside > div:last-child {
+    display: flex;
+    align-items: end;
+  }
+  aside img {
+    margin-bottom: -1rem;
+    transition: transform 0.3s;
+    transform: translateY(21px);
+    width: 5.5rem;
+    height: auto;
+  }
+
+  aside:hover img {
+    transform: translateY(0px);
+  }
+
+  aside:hover {
+    box-shadow:
+      0px 10px 6px hsla(258, 50%, 40%, 0.055),
+      0px 6px 4px hsla(258, 50%, 40%, 0.055),
+      0px 5px 4px hsla(258, 50%, 40%, 0.155),
+      0px 2px 2px hsla(258, 50%, 40%, 0.155);
+  }
+
+  .leo__image {
+    width: fit-content;
+    align-self: end;
+  }
+</style>
