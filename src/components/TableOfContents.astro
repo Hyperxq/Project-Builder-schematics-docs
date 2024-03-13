@@ -2,53 +2,78 @@
 import { Icon } from "@astrojs/starlight/components";
 import type { Props } from "@astrojs/starlight/props";
 import TableOfContentsList from "./TableOfContentsList.astro";
-
+import CoffeeButton from "./CoffeeButton.astro";
 const { toc } = Astro.props;
 ---
 
 {
   toc && (
-    <starlight-toc
-      data-min-h={toc.minHeadingLevel}
-      data-max-h={toc.maxHeadingLevel}
-    >
-      <nav aria-labelledby="starlight__on-this-page">
-        <h2 id="starlight__on-this-page">On this page</h2>
+    <>
+      <div class="sl-container">
+        <starlight-toc
+          data-min-h={toc.minHeadingLevel}
+          data-max-h={toc.maxHeadingLevel}
+        >
+          <nav aria-labelledby="starlight__on-this-page">
+            <h2 id="starlight__on-this-page">On this page</h2>
 
-        <>
-          <TableOfContentsList toc={toc.items} />
-          <h2 class="contribute">Contribute</h2>
-          <ul>
-            <li>
+            <>
+              <TableOfContentsList toc={toc.items} />
+              <h2 class="contribute">Contribute</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/Hyperxq/Project-Builder-schematics-docs/blob/main/CONTRIBUTING.md"
+                    target="_blank"
+                  >
+                    <Icon name="open-book" /> Contribute
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Hyperxq/Project-Builder-schematics-docs/discussions/new/choose"
+                    target="_blank"
+                  >
+                    <Icon name="external" /> Start a discussion
+                  </a>
+                </li>
+              </ul>
               <a
-                href="https://github.com/Hyperxq/Project-Builder-schematics-docs/blob/main/CONTRIBUTING.md"
-                target="_blank"
+                href="https://github.com/Hyperxq/Project-Builder-schematics-docs/issues/new"
+                class="btn__mistake"
               >
-                <Icon name="open-book" /> Contribute
+                Did you find an issue?
               </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Hyperxq/Project-Builder-schematics-docs/discussions/new/choose"
-                target="_blank"
-              >
-                <Icon name="external" /> Start a discussion
-              </a>
-            </li>
-          </ul>
-          <a
-            href="https://github.com/Hyperxq/Project-Builder-schematics-docs/issues/new"
-            class="btn__mistake"
-          >
-            Did you find an issue?
-          </a>
-        </>
-      </nav>
-    </starlight-toc>
+            </>
+          </nav>
+        </starlight-toc>
+      </div>
+
+      <div class="sl-container coffee-me_button">
+        <CoffeeButton />
+      </div>
+    </>
   )
 }
-
 <style>
+  .right-sidebar-panel {
+    height: 100%;
+  }
+
+  .right-sidebar {
+    width: fit-content;
+  }
+
+  .sl-container:has(div.coffee-me_button) {
+    position: relative;
+    height: 100%;
+  }
+
+  .coffee-me_button {
+    position: absolute;
+    bottom: 0;
+  }
+
   ul {
     padding: 0;
     list-style: none;
