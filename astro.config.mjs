@@ -29,6 +29,7 @@ export default defineConfig({
       },
       social: {
         github: "https://github.com/Hyperxq/Project-Builder-schematics-docs",
+        'x.com': 'https://twitter.com/SForHumans',
       },
       sidebar: [
         {
