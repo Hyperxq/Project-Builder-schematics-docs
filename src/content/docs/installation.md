@@ -8,7 +8,7 @@ When you want to start creating schematics, you likely have two questions:
 
 ## How can I create schematics?
 
-To create schematics, you need to create an npm project library.
+To create schematics, you need to create a npm project library.
 
 **Requirements:**
 
