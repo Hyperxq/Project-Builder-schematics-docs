@@ -96,6 +96,15 @@ export default defineConfig({
           ],
         },
         {
+          label: "Frameworks",
+          items: [
+            {
+              label: "Astro",
+              link: "/frameworks/astro"
+            }
+          ]
+        },
+        {
           label: "Files",
           items: [
             {
