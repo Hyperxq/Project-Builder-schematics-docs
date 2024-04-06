@@ -56,7 +56,7 @@ npx @pbuilder/astro-cli g l <layout-name>
 For page creation, specify the type **(astro is the default one)** and layout:
 
 ```sh
-pastro g p <page-name> --type [md, mdx, astro] --layout <layout file name>
+pastro g pg <page-name> --type [md, mdx, astro] --layout <layout file name>
 ```
 
 Or use the direct method:
