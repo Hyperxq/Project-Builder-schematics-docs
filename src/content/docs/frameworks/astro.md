@@ -62,7 +62,7 @@ pastro g pg <page-name> --type [md, mdx, astro] --layout <layout file name>
 Or use the direct method:
 
 ```sh
-npx @pbuilder/astro-cli g p <page-name> --type [md, mdx, astro] --layout <layout file name>
+npx @pbuilder/astro-cli g pg <page-name> --type [md, mdx, astro] --layout <layout file name>
 ```
 
 ## What If I Need Something More?
