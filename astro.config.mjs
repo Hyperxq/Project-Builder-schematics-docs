@@ -43,6 +43,10 @@ export default defineConfig({
               label: "Why Use Schematics?",
               link: "/why-schematics",
             },
+            {
+              label: "How to use the CLI?",
+              link: "/tutorials/how-to-use-the-cli",
+            },
           ],
         },
         {
@@ -59,10 +63,6 @@ export default defineConfig({
             {
               label: "How to test your schematic library?",
               link: "/tutorials/test-your-schematic",
-            },
-            {
-              label: "How to use the CLI?",
-              link: "/tutorials/how-to-use-the-cli",
             },
             {
               label: "When to use Rules or call other schematics?",
