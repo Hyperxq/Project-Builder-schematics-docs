@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import compressor from "astro-compressor";
 import purgecss from 'astro-purgecss';
 import favicons from "astro-favicons";
+import starlightDocSearch from '@astrojs/starlight-docsearch';
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://schematics.pbuilder.dev",
@@ -165,7 +167,13 @@ export default defineConfig({
         }
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
-      plugins: [],
+      plugins: [
+        starlightDocSearch({
+          appId: 'XPU6E4M3TZ',
+          apiKey: 'cc982c544200f8f09a971ce953ddeb54',
+          indexName: 'dev_Name'
+         }),
+      ],
     }),
     sitemap(),
     compressor({ gzip: true, brotli: true }),
