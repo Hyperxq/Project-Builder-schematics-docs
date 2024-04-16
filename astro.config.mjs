@@ -26,12 +26,12 @@ export default defineConfig({
       components: {
         // Relative path to the custom component.
         Head: "./src/components/Head.astro",
-        TableOfContents: './src/components/TableOfContents.astro',
+        TableOfContents: "./src/components/TableOfContents.astro",
         // PageSidebar: './src/components/starlight/PageSidebar.astro',
       },
       social: {
         github: "https://github.com/Hyperxq/Project-Builder-schematics-docs",
-        'x.com': 'https://twitter.com/SForHumans',
+        "x.com": "https://twitter.com/SForHumans",
       },
       sidebar: [
         {
@@ -102,9 +102,9 @@ export default defineConfig({
           items: [
             {
               label: "Astro",
-              link: "/frameworks/astro"
-            }
-          ]
+              link: "/frameworks/astro",
+            },
+          ],
         },
         {
           label: "Files",
@@ -163,16 +163,16 @@ export default defineConfig({
         },
         {
           label: "Limitations",
-          link: "/limitations"
-        }
+          link: "/limitations",
+        },
       ],
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [
         starlightDocSearch({
-          appId: 'XPU6E4M3TZ',
-          apiKey: 'cc982c544200f8f09a971ce953ddeb54',
-          indexName: 'dev_Name'
-         }),
+          appId: "XPU6E4M3TZ",
+          apiKey: "cc982c544200f8f09a971ce953ddeb54",
+          indexName: "project-builder-index",
+        }),
       ],
     }),
     sitemap(),
@@ -184,13 +184,13 @@ export default defineConfig({
       faviconsDarkMode: true,
     }),
   ],
-  plugins: ['prettier-plugin-astro'],
+  plugins: ["prettier-plugin-astro"],
   overrides: [
     {
-      files: '*.astro',
+      files: "*.astro",
       options: {
-        parser: 'astro',
+        parser: "astro",
       },
     },
-  ]
+  ],
 });
