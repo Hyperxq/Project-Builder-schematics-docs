@@ -1,6 +1,6 @@
 import algoliasearch from "algoliasearch";
 import { readFileSync, readdirSync, statSync } from "fs";
-import { join, resolve } from "path";
+import { join } from "path";
 
 // Initialize Algolia client
 const client = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_ADMIN_API_KEY);
@@ -56,4 +56,4 @@ async function main() {
   await syncToAlgolia(files);
 }
 
-main();
+await main();
