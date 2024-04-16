@@ -169,9 +169,9 @@ export default defineConfig({
       customCss: ["./src/styles/colors.css", "./src/styles/theme.css", "./src/styles/custom.css"],
       plugins: [
         starlightDocSearch({
-          appId: "XPU6E4M3TZ",
-          apiKey: "cc982c544200f8f09a971ce953ddeb54",
-          indexName: "project-builder-index",
+          appId: "LMC7D7B01D",
+          apiKey: "692f5b7715348657489882a06c3e5530",
+          indexName: "schematics",
         }),
       ],
     }),
