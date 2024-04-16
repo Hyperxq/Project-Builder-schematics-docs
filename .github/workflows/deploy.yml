@@ -26,12 +26,6 @@ jobs:
         run: npm ci
       - name: Build Astro
         run: npm run build --if-present
-      - name: Sync with Algolia
-        run: node src/lib/algolia.js
-        env:
-          CI: true
-          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID}}
-          ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
