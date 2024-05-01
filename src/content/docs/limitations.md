@@ -10,7 +10,7 @@ Schematics from `@angular-devkit` is a powerful tool for automating project modi
 | You cannot read the dry-run parameter inside a schematic.             |                        |                |
 | In dry-run mode, sub-schematics are not called.                       |                        |                |
 | Dry-run only covers file operation, not executing scripts.            |                        |                |
-| Schematic CLI `blank` command doesn’t support Package Manager option. |                        |                |
+| Schematic CLI `blank` command doesn’t support Package Manager option. |  [Link](https://github.com/angular/angular-cli/issues/27571)                      |                |
 | NodePackage Installation doesn’t show the right NPM package manager.  |                        |                |
 | You cannot create custom Task.                                        |                        |                |
 
