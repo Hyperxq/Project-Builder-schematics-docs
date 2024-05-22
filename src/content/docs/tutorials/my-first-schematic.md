@@ -56,7 +56,7 @@ The CLI already create a schematics called: `builder-add`. After you publish you
 **6.** To test it we can run:
 
 ```ansi
-[38;2;127;86;217mschematics[0m [38;2;23;178;106m./dist/collection.json:my-schematic[0m
+[38;2;127;86;217mbuilder[0m [38;2;23;178;106mexec ./dist/collection.json my-schematic[0m
 ```
 
 **Congratulations! 🚀**

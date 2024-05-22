@@ -9,7 +9,7 @@ description: An introduction to schematics world.
 
 Imagine you have a magic wand that can instantly create, modify, or organize your project files exactly how you want them, without any mistakes. That's what schematics do for software development. They automate tasks that would usually take hours and ensure everything is done correctly every time. Here's why schematics are a game-changer:
 
-![Why-schematics](../../assets/why-schematics.webp)
+![Why-schematics](../../../assets/why-schematics.webp)
 
 1. **Save Time on Repetitive Tasks:**
 Manual tasks like creating components, services, or setting up configurations take time and can be repetitive. Schematics can do all these tasks in seconds, letting you focus on writing the unique parts of your code.
