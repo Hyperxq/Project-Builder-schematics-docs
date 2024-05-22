@@ -17,10 +17,10 @@ To activate watching mode, execute:
 npm run build:watch
 ```
 
-Then, you can test your schematics using the `Schematic CLI` with the command:  `schematics [collection-location]:[schematic-name]`. For example, to test it at the root of your project:
+Then, you can test your schematics using the `CLI` with the command:  `builder exec [collection-location] [schematic-name]`. For example, to test it at the root of your project:
 
 ```ansi
-[38;2;127;86;217mschematics[0m [38;2;0;134;201m./dist/collection.json:prettier[0m
+[38;2;127;86;217mbuilder[0m [38;2;0;134;201mexec ./dist/collection.json prettier[0m
 ```
 
 ### Npm Link

@@ -36,17 +36,21 @@ export default defineConfig({
           label: "Start Here",
           items: [
             {
-              label: "Installation",
-              link: "/installation",
+              label: "Overview",
+              link: "/getting-started/overview",
             },
             {
-              label: "Why Use Schematics?",
-              link: "/why-schematics",
+              label: "First steps",
+              link: "/getting-started/first-steps",
             },
             {
               label: "How to use the CLI?",
-              link: "/tutorials/how-to-use-the-cli",
+              link: "/getting-started/cli",
             },
+            {
+              label: "What's next?",
+              link: "/getting-started/whats-next",
+            }
           ],
         },
         {
@@ -55,10 +59,6 @@ export default defineConfig({
             {
               label: "My first schematic",
               link: "/tutorials/my-first-schematic",
-            },
-            {
-              label: "How to install dependencies?",
-              link: "/tutorials/install-dependencies",
             },
             {
               label: "How to test your schematic library?",
@@ -94,6 +94,10 @@ export default defineConfig({
               link: "/core-concepts/schema-json",
             },
           ],
+        },
+        {
+          label: "How to install dependencies?",
+          link: "/install-dependencies",
         },
         {
           label: "Frameworks",
@@ -145,10 +149,6 @@ export default defineConfig({
         {
           label: "Utils",
           items: [
-            {
-              label: "Logger",
-              link: "/utils/logger",
-            },
             {
               label: "Spinner",
               link: "/utils/ora",
