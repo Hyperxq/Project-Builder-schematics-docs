@@ -6,7 +6,7 @@ description: How to start into the schematics world.
 ## Prerequisites
 
 - NodeJS 20+.
-- Install `npm i -g @builder/cli` or use `npx @pbuilder/cli`.
+- Install `npm i -g @pbuilder/cli` or use `npx @pbuilder/cli`.
 
 ## Starting a New Project
 
