@@ -16,7 +16,7 @@ If you are using VSCode and encounter issues loading schemas, check this article
 ## Prerequisites
 
 - NodeJS 20+.
-- Install `npm i -g @builder/cli` or use `npx @pbuilder/cli`.
+- Install `npm i -g @pbuilder/cli` or use `npx @pbuilder/cli`.
 
 ## Create a schematic project
 
