@@ -20,18 +20,30 @@ If you noticed, every files has the `.template` extension, that is because you w
 ## Code sample
 
 ```ts
-import { Rule, strings, MergeStrategy } from "@angular-devkit/schematics";
+import {
+  MergeStrategy,
+  Rule,
+  apply,
+  applyTemplates,
+  filter,
+  mergeWith,
+  move,
+  renameTemplateFiles,
+  strings,
+  url,
+} from '@angular-devkit/schematics';
 
 function addPrettierFiles(): Rule {
-  const urlTemplates = [".prettierrc.template", ".prettierignore.template"];
-  const template = apply(url("./files"), [
+  const urlTemplates = ['.prettierrc.template', '.prettierignore.template'];
+  const template = apply(url('./files'), [
     filter((path) => urlTemplates.some((urlTemplate) => path.includes(urlTemplate))),
     applyTemplates({
       ...strings,
     }),
     renameTemplateFiles(),
-    move("./"),
+    move('./'),
   ]);
+
   return mergeWith(template, MergeStrategy.Overwrite);
 }
 ```
