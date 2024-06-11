@@ -56,6 +56,15 @@ export default defineConfig({
           ],
         },
         {
+          label: "How to",
+          items: [
+            {
+              label: "How to Extend an Existing Schematic",
+              link: "/how-to/how-to-extend-an-existing-schematic",
+            }
+          ],
+        },
+        {
           label: "Tutorials",
           items: [
             {
