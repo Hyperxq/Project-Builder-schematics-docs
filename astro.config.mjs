@@ -188,7 +188,7 @@ export default defineConfig({
     compressor({ gzip: true, brotli: true }),
     purgecss(),
     favicons({
-      masterPicture: "./public/favicon.svg",
+      masterPicture: "./public/leo.webp",
       emitAssets: true,
       faviconsDarkMode: true,
     }),
