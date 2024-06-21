@@ -1,6 +1,7 @@
 ---
 import type { Props } from "@astrojs/starlight/props";
 import Default from "@astrojs/starlight/components/Head.astro";
+import { SEOMetadata } from "astro-seo-metadata";
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
@@ -12,15 +13,30 @@ const imageSrc = ogImageUrl ?? "/default-og-image.png";
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
 ---
 
-<meta name="title" content="Schematics Documentation" />
-<meta
-  name="keywords"
-  content="angular schematics documentation, schematics documentation, how to use angular schematics, how to create custom angular schematics, Angular Schematics, Schematics Javascript, Schematics Tutorial, Schematics for Angular Developers, Javascript Schematics Guide, Schematics Library, Schematics Development, How to use Schematics with Angular, Schematics Javascript Integration, Learning Schematics for Web Development, Advanced Schematics Documentation, Building Projects with Schematics"
+<SEOMetadata
+  siteName={"Schematics for humans"}
+  favicon={"/leo.webp"}
+  author="Daniel Ramírez"
+  copyright="ISC"
+  astroSitemap={true}
+  canonicalUrl={Astro.url.toString()}
+  type={"website"}
+  astroGenerator={true}
 />
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<meta
+  name="keywords"
+  content="angular schematics, angular eslint schematics, angular devkit schematics, angular material schematics, ngrx schematics, schematics angular component, angular schematics tutorial, angular cli schematics, angular component schematics, angular custom schematics, angular schematics documentation, angular schematics example, angular schematics github, angular schematics list, angular schematics template, create angular schematics, custom angular schematics, custom schematics angular, material angular schematics, schematic angular, schematics angular, schematics angular application, schematics in angular."
+/>
 <meta property="og:type" content="website" />
-<meta name="google-site-verification" content="-OlG3l1BfQuKpnSEE8eYLs9xbqFBoZxt2cPpiFUMMoo" />
+<meta
+  name="google-site-verification"
+  content="-OlG3l1BfQuKpnSEE8eYLs9xbqFBoZxt2cPpiFUMMoo"
+/>
 
 <!-- Render the default <Head/> component. -->
 <Default {...Astro.props}><slot /></Default>
