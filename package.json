@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
     "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/starlight": "^0.27.1",
-    "@astrojs/starlight-docsearch": "^0.1.1",
+    "@astrojs/check": "^0.5.6",
+    "@astrojs/starlight": "^0.20.1",
+    "@astrojs/starlight-docsearch": "0.1.0",
     "algoliasearch": "4.23.3",
-    "astro": "^4.15.4",
+    "astro": "^4.3.5",
     "astro-compressor": "0.4.1",
     "astro-expressive-code": "0.33.4",
     "astro-favicons": "2.0.2",
@@ -23,7 +23,7 @@
     "astro-purgecss": "4.1.0",
     "purgecss": "5.0.0",
     "sass": "1.71.1",
-    "sharp": "^0.32.6",
+    "sharp": "^0.32.5",
     "typescript": "^5.3.3"
   },
   "repository": {
@@ -45,6 +45,5 @@
     "astro-seo-metadata": "^0.6.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
-  },
-  "packageManager": "pnpm@9.7.1"
+  }
 }
