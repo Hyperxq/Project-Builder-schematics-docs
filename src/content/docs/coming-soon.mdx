@@ -9,14 +9,50 @@ Welcome to this section 🎉. You know my goal is to make schematics for humans 
 
 <br/>
 
-<Card title="Schematics bank"  icon="pencil">
-   This documentation enables every JavaScript developer to create their own schematics 📝. But you might wonder:<br/>
-<strong>"If I create my own schematics, where can I share them?"</strong> or <strong>"Where can I find schematics from the community?"</strong>
-Currently, there’s no direct solution 🤔. However, I’m developing a website where everyone can publish and share information about their schematics 🌐.
+<Card title="Introducing the SchematicOrchestrator"  icon="pencil">
+   <p>We are developing a <strong>SchematicOrchestrator</strong>, a singleton-based system designed to manage <strong>schematic dependencies</strong> in a tree structure within our CLI tool. This system will automate the management of collections and their dependencies across multiple levels.</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li><strong>Dependency Management:</strong> Automatically installs and tracks dependencies, supporting conflict resolution between versions.</li>
+    <li><strong>Level Processing:</strong> Handles installation and execution sequentially across different levels, ensuring proper order.</li>
+    <li><strong>Concurrency Control:</strong> Manages tasks asynchronously or synchronously based on user configurations.</li>
+    <li><strong>Error Handling & Rollbacks:</strong> Includes mechanisms to handle errors and roll back failed installations.</li>
+    <li><strong>Global State Management:</strong> Operates as a singleton to maintain a global state and orchestrate processes efficiently.</li>
+    <li><strong>Task Tracking:</strong> Uses RxJS Subjects to track progress and notify when each level's tasks are complete.</li>
+  </ul>
+
+  <p>This design enhances the scalability and automation of schematic operations, making it more efficient and maintainable.</p>
 </Card>
 
-<Card title="Advance tutorials"  icon="pencil">
-    Embarking on the schematics journey requires learning from the most basic concepts to the most advanced 📚. I aim to guide you through maximizing the potential of schematics, ensuring you get the most out of them 💪.
+<Card title="Utility System for Schematic"  icon="pencil">
+    <p>The <strong>Utility System</strong> allows developers to create schematics faster by using pre-built utilities that already contain working code. The CLI automatically adds the utility file and its dependencies to your schematic project, streamlining the development process.</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li><strong>Utility Encapsulation:</strong> Each utility is packaged in a schematic, making it easy to reuse and integrate with new projects.</li>
+    <li><strong>Automated Dependency Management:</strong> The CLI automatically installs any required libraries or dependencies when a utility is added to your schematic project.</li>
+    <li><strong>Standardized Documentation:</strong> Each utility includes comprehensive documentation, ensuring developers know how to use and modify the utilities.</li>
+    <li><strong>Naming Standards:</strong> Utilities and packages follow consistent naming conventions to maintain clarity and organization across projects.</li>
+    <li><strong>File Insertion:</strong> The CLI checks whether a file already exists in your project before adding the utility, allowing you to customize this behavior with flags for file overwriting or skipping.</li>
+  </ul>
+
+  <p>This system accelerates schematic development by leveraging reusable utilities, reducing the amount of custom code required for each project.</p>
+</Card>
+<br/>
+
+<Card title="Introducing the builder-remove Schematic"  icon="pencil">
+ <p>In addition to the default <strong>builder-add</strong> schematic, which configures everything before using any schematic from the installed collection, we are now introducing the <strong>builder-remove</strong> schematic. This new default schematic will have its own CLI command, allowing you to roll back all previous configurations made by <code>builder-add</code>, ensuring a smooth and safe way to undo changes when necessary.</p>
+
+  <h3>Key Features:</h3>
+  <ul>
+    <li><strong>Dedicated CLI Command:</strong> <code>builder-remove</code> will be executed via its own command in the CLI, making rollback and cleanup simple and straightforward.</li>
+    <li><strong>Automatic Rollback:</strong> <code>builder-remove</code> will undo all configurations and installations performed by <code>builder-add</code>, restoring your project to its previous state.</li>
+    <li><strong>Error Handling:</strong> In case of errors during installation or configuration, <code>builder-remove</code> provides a safe mechanism to revert any incomplete or failed steps.</li>
+    <li><strong>Easy Cleanup:</strong> This schematic can also be used for project cleanup, uninstalling collections and removing configurations when they are no longer needed.</li>
+  </ul>
+
+  <p>With <code>builder-remove</code> and its dedicated CLI command, managing your schematic configurations becomes more flexible and secure, giving you the ability to easily revert any changes made during the setup process.</p>
 </Card>
 <br/>
 
