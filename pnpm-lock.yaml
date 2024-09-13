@@ -11,6 +11,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.3
         version: 0.9.3(prettier-plugin-astro@0.13.0)(prettier@3.3.2)(typescript@5.5.2)
+      '@astrojs/sitemap':
+        specifier: ^3.1.6
+        version: 3.1.6
       '@astrojs/starlight':
         specifier: ^0.27.1
         version: 0.27.1(astro@4.15.4(rollup@4.21.3)(sass@1.71.1)(typescript@5.5.2))
