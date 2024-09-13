@@ -5,9 +5,13 @@ import compressor from "astro-compressor";
 import purgecss from 'astro-purgecss';
 import favicons from "astro-favicons";
 import starlightDocSearch from '@astrojs/starlight-docsearch';
+import { defineConfig, passthroughImageService } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  image: {
+    service: passthroughImageService()
+  },
   site: "https://schematics.pbuilder.dev",
   integrations: [
     starlight({
@@ -33,6 +37,7 @@ export default defineConfig({
         github: "https://github.com/Hyperxq/Project-Builder-schematics-docs",
         "x.com": "https://twitter.com/SForHumans",
       },
+      customCss: ['./src/assets/landing.css'],
       sidebar: [
         {
           label: "Start Here",
