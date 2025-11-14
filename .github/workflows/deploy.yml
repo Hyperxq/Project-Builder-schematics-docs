@@ -24,7 +24,7 @@ jobs:
       - name: Build Astro
         run: npm run build
       - name: Upload artifact (GitHub Pages)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: github-pages
           path: |
