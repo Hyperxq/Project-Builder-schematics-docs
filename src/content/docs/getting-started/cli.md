@@ -58,6 +58,28 @@ To execute schematics from private packages, specify the registry with the follo
 ```ansi
 [38;2;127;86;217mbuilder[0m [38;2;23;178;106mexec[0m [collection-name] [schematic-name] [options] --registry="http://localhost:4873"
 ```
+## 📦 `builder config` Command
+The `builder config` command allows you to read, write, delete, and list configuration values used by the CLI.
+
+### 🧠 How Configuration Works
+
+1. **Local Config (`./builder.config.json`)**
+   - If found, it overrides global config.
+   - Project-specific settings.
+
+2. **Global Config (`~/.config/builder-cli/config.json`)**
+   - Loaded when no local config exists.
+   - Used for user-wide settings.
+
+3. **Default Config (applied automatically if no config exists):**
+
+```ts
+const DEFAULT_CONFIG = {
+  cli: {
+    showBanner: true,
+  },
+};
+```
 
 ## Get info about a schematic
 
