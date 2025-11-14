@@ -27,7 +27,7 @@ jobs:
       - name: Build Astro
         run: npm run build --if-present
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
