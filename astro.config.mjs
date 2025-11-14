@@ -11,7 +11,10 @@ import { defineConfig, passthroughImageService } from 'astro/config';
 export default defineConfig({
   vite: {
     build: {
-      sourcemap: false
+      sourcemap: false,
+      rollupOptions: {
+        preserveSymlinks: false,
+      },
     }
   },
   image: {
