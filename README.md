@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **This repository is archived.** The Project Builder documentation moved to
+> [Project-Builder-Schematics/project-builder-docs](https://github.com/Project-Builder-Schematics/project-builder-docs)
+> and is live at **[schematics.pbuilder.dev](https://schematics.pbuilder.dev)**.
+
 # Schematics Documentation
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
